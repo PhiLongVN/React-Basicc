@@ -63,7 +63,7 @@ class AddComponent extends React.Component {
         <label>Salary:</label>
         <br />
         <button type="submit" onClick={(event) => this.handleSubmit(event)}>
-          button
+          Submit
         </button>
         <button type="submit" onClick={(e) => this.handleHideShow(e)}>
           Hide

@@ -1,6 +1,9 @@
 import React from 'react';
-
+import '../index.scss';
 class Show extends React.Component {
+  handleDelete = (com) => {
+    this.props.handleDetele(com);
+  };
   render() {
     let { jobName, isShow } = this.props;
     // console.log("Show -> render -> isShow", isShow)
@@ -8,8 +11,11 @@ class Show extends React.Component {
     let a =
       jobName !== []
         ? jobName.map((com) => (
-            <div key={com.id}>
-              Ten: {com.title} and Luong: {com.salary}
+            <div className="block" key={com.id}>
+              <div>
+                Ten: {com.title} and Luong: {com.salary}
+              </div>
+              <button onClick={() => this.handleDelete(com)}>X</button>
             </div>
           ))
         : '';
